@@ -19,8 +19,8 @@ class AvailableController {
     })
 
     const schedule = [
-      '8:00',
-      '9:00',
+      '08:00',
+      '09:00',
       '10:00',
       '11:00',
       '12:00',
@@ -41,7 +41,7 @@ class AvailableController {
 
       return {
         time,
-        value: value.format,
+        value: value.format(),
         available:
           value.isAfter(moment()) &&
           !appointments.find(a => moment(a.date).format('HH:mm') === time)

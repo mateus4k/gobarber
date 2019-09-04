@@ -1,4 +1,4 @@
-#GoBarber
+# GoBarber
 
 ## Install
 

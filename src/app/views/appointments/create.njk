@@ -14,7 +14,7 @@
 
     <div id="hours"></div>
 
-    <button type="submit">Angedar</button>
+    <button type="submit">Agendar</button>
   </form>
 </div>
 
@@ -23,7 +23,7 @@
     minDate: new Date(),
     dateFormat: "d/m/Y",
     onChange: function(date) {
-      fetch(`/app/available/{{provider.id}}?date=${date[0].getTime()}`).then(
+      fetch(`/app/available/{{ provider.id }}?date=${date[0].getTime()}`).then(
         function(response) {
           response.text().then(function(html) {
             document.getElementById("hours").innerHTML = html;
